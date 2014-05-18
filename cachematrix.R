@@ -3,7 +3,7 @@
 # Copy/Paste the example code into relevant functions
 # Apply the solve function to the matrix x
 # ie replace all words "mean" with "solve"
-# Test the functions
+# Now. Test the functions
 
 
 
