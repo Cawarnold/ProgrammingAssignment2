@@ -1,10 +1,27 @@
-## Put comments here that give an overall description of what your
-## functions do
+## Method:
+# Clone the cachematrix.R file
+# Copy/Paste the example code into relevant functions
+# Apply the solve function to the matrix x
+# ie replace all words "mean" with "solve"
+# Test the functions
+
+
+
 
 ## Write a short comment describing this function
 
 makeCacheMatrix <- function(x = matrix()) {
-  x <- solve(x)
+  m <- NULL
+  set <- function(y) {
+    x <<- y
+    m <<- NULL
+  }
+  get <- function() x
+  setinverse <- function(solve) m <<- solve
+  getinverse <- function() m
+  list(set = set, get = get,
+       setinverse = setinverse,
+       getinverse = getinverse)
 }
 
 
@@ -12,4 +29,13 @@ makeCacheMatrix <- function(x = matrix()) {
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
+  m <- x$getinverse()
+  if(!is.null(m)) {
+    message("getting cached data")
+    return(m)
+  }
+  data <- x$get()
+  m <- solve(data, ...)
+  x$setinverse(m)
+  m
 }
