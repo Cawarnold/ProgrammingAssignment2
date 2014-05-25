@@ -10,6 +10,12 @@
 
 ## Write a short comment describing this function
 
+# The function makeCacheMatrix creates an empty 'matrix', 
+  #1. set the value of the matrix
+  #2. get the value of the matrix
+  #3. set the value of the inverse matrix
+  #4. get the value of the inverse matrix
+
 makeCacheMatrix <- function(x = matrix()) {
   m <- NULL
   set <- function(y) {
