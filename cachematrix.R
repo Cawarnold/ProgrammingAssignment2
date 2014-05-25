@@ -5,7 +5,7 @@
 # ie replace all words "mean" with "solve"
 # Now. Test the functions
 
-
+#R.version.string
 
 
 ## Write a short comment describing this function
@@ -26,6 +26,13 @@ makeCacheMatrix <- function(x = matrix()) {
 
 
 ## Write a short comment describing this function
+
+#Checks to see if The inverse of the matrix has already been calculated,
+#If not, then:
+#Calculates the inverse of a matrix using makeCacheMatrix, and caches it.
+#If so, then:
+#The cache provides the inverse matrix and the calculation is skipped.
+
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
